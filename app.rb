@@ -1,4 +1,10 @@
 require_relative './src/modules/read_write_file'
+require_relative './src/author'
+require_relative './src/genre'
+require_relative './src/book'
+require_relative './src/music_album'
+require_relative './src/game'
+require_relative './src/label'
 require_relative './src/modules/get_user_input'
 require_relative './src/modules/read_file'
 

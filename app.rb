@@ -51,6 +51,20 @@ class App
     print_dash(130)
   end
 
+   def list_all_books
+    unless @lood_files[:books].empty?
+      print_dash(174)
+      puts '                                                                    Books:'
+      @lood_files[:books].each do |book|
+        print_dash(174)
+        puts "| Genre: #{book['genre']['name']}, Author name: #{book['author']['first_name']} #{book['author']['last_name']}, Label title: #{book['label']['title']}, label color: #{book['label']['color']},
+        Publish date: #{book['publish_date']}, Publisher: #{book['publisher']}, Cover state: #{book['cover_state']}"
+      end
+      print_dash(174)
+    end
+    puts "\n No Music Album to Display \n" if @lood_files[:books].empty?
+  end
+
 
 
 

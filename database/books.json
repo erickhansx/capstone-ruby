@@ -1,3 +1,21 @@
 [
-
+  {
+    "genre": {
+      "id": 459,
+      "name": "cvsdsd"
+    },
+    "author": {
+      "id": 699,
+      "first_name": "fsdsdf",
+      "last_name": "sfsdf"
+    },
+    "label": {
+      "id": 140,
+      "title": "sdfsdf",
+      "color": "sdfdsf"
+    },
+    "publish_date": "2017-10-10",
+    "publisher": "sdad",
+    "cover_state": "sdsd"
+  }
 ]

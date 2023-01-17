@@ -5,12 +5,11 @@ describe Book do
     before(:each) do
       genre = { id: 384, name: 'Comedy', items: [] }
       author = { id: 572, first_name: 'Ndorrh', last_name: 'oswald beu', items: [] }
-      source = { id: 76, name: 'Friend', items: [] }
       label = { id: 119, title: 'New', color: 'Green', items: [] }
       publish_date = '10/102015'
       cover_state = 'good'
       publisher = 'oswald house'
-      @book = Book.new(genre, author, source, label, publish_date, publisher, cover_state)
+      @book = Book.new(genre, author, label, publish_date, publisher, cover_state)
     end
 
     it 'should be able to acces name in genre object' do

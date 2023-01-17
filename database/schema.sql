@@ -18,6 +18,22 @@ CREATE TABLE "Label"(
     "color" VARCHAR(255) NOT NULL
 );
 
+ALTER TABLE
+    "Label" ADD PRIMARY KEY("id");
+CREATE TABLE "Book"(
+    "id" BIGINT NOT NULL,
+    "publisher" VARCHAR(255) NOT NULL,
+    "cover_state" VARCHAR(255) NOT NULL,
+    "publish_date" DATE NOT NULL,
+    "archived" BOOLEAN NOT NULL,
+    "label_id" INTEGER NOT NULL,
+    "author_id" BIGINT NOT NULL,
+    "source_id" BIGINT NOT NULL,
+    "genre_id" BIGINT NOT NULL
+);
+ALTER TABLE
+    "Book" ADD PRIMARY KEY("id");
+
 
 
 

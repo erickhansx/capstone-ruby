@@ -28,10 +28,15 @@ class Item
     @label = label
     label.items.push(self) unless label.items.include?(self)
   end
-
+  
+  def move_to_archive()
+    can_be_archived? ? @archive = true : false
+  end
+  
   private
 
   def can_be_archived?()
     input_date(@publish_date) > 10
   end
+
 end

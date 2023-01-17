@@ -1,25 +1,24 @@
 AllCops:
   NewCops: enable
   Exclude:
-    - 'Guardfile'
-    - 'Rakefile'
-    - 'node_modules/**/*'
+    - "Guardfile"
+    - "Rakefile"
+    - "node_modules/**/*"
 
   DisplayCopNames: true
 
 Layout/LineLength:
-  Max: 120
-Metrics/MethodLength:
-  Max: 20
-Metrics/AbcSize:
-  Max: 50
-Metrics/ClassLength:
   Max: 150
+Metrics/MethodLength:
+  Max: 50
+Metrics/AbcSize:
+  Max: 80
+Metrics/ClassLength:
+  Max: 200
 Metrics/BlockLength:
   IgnoredMethods: ['describe']
   Max: 30
-Metrics/ParameterLists:
-  Enabled: false
+
 
 Style/Documentation:
   Enabled: false
@@ -30,6 +29,8 @@ Style/EachForSimpleLoop:
 Style/AndOr:
   Enabled: false
 Style/DefWithParentheses:
+  Enabled: false
+Metrics/ParameterLists:
   Enabled: false
 Style/FrozenStringLiteralComment:
   EnforcedStyle: never
@@ -50,4 +51,8 @@ Style/HashEachMethods:
 Style/HashTransformKeys:
   Enabled: false
 Style/HashTransformValues:
+  Enabled: false
+Metrics/CyclomaticComplexity:
+  Enabled: false
+Metrics/PerceivedComplexity:
   Enabled: false

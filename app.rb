@@ -7,7 +7,6 @@ require_relative './src/game'
 require_relative './src/label'
 require_relative './src/modules/get_user_input'
 require_relative './src/modules/read_file'
-
 class App
   attr_accessor :genres, :authors, :sources, :labels, :books, :music_albums, :movies, :games
 
@@ -31,9 +30,13 @@ class App
     new_author = @user_input.author
     author = Author.new(new_author[:f_name], new_author[:l_name])
 
+   
+
+
   
 
     @lood_files[:authors] << author unless @lood_files[:authors].any?{ |aut| author.first_name == aut[:first_name] && author.last_name == aut[:last_name]}
+
 
     print_dash(130)
     new_label = @user_input.label
@@ -43,6 +46,44 @@ class App
     [new_genre, author, label]
   end
 
+  def add_book
+    arg = get_attributes('Book')
+    publish_date = @user_input.input_date('Publish date')
+    publisher = @user_input.str('Publisher')
+    cover_state = @user_input.str('Cover State')
+    book = Book.new(arg[0], arg[1], arg[3], arg[2], publish_date, publisher, cover_state)
+    new_book = @user_input.parse_data(book)
+    @lood_files[:books] << new_book unless @lood_files[:books].include?(new_book)
+    print_dash(130)
+    puts '                                                    Book added successfully                                     '
+    print_dash(130)
+  end
+
+   def list_all_books
+    unless @lood_files[:books].empty?
+      print_dash(130)
+      puts '                                                                    Books:'
+      @lood_files[:books].each do |book|
+        print_dash(130)
+        puts "| Genre: #{book['genre']['name']}, Author name: #{book['author']['first_name']} #{book['author']['last_name']}, Label title: #{book['label']['title']}, label color: #{book['label']['color']},
+        Publish date: #{book['publish_date']}, Publisher: #{book['publisher']}, Cover state: #{book['cover_state']}"
+      end
+      print_dash(130)
+    end
+    puts "\n No Music Album to Display \n" if @lood_files[:books].empty?
+   end
+
+    def list_all_labels
+    unless @lood_files[:labels].empty?
+      print_dash(130)
+      puts 'Labels:'
+      @lood_files[:labels].each do |label|
+        print_dash(130)
+        puts "Title: #{label['title']}, Color: #{label['color']}"
+      end
+    end
+    puts "No label to display \n" if @lood_files[:labels].empty?
+  end
 
 def add_music_album
     arg = get_attributes('Music')

@@ -50,7 +50,20 @@ def add_music_album
     print_dash(130)
   end
 
-
+  def list_all_music_albums
+    unless @lood_files[:music_albums].empty?
+      print_dash(130)
+      puts '|                                                                Music albums:'
+      @lood_files[:music_albums].each do |album|
+        print_dash(130)
+        puts "Genre: #{album['genre']['name']}, Author name: #{album['author']['first_name']} #{album['author']['last_name']},
+        Label title: #{album['label']['title']}, label color: #{album['label']['color']},
+        Publish date: #{album['publish_date']}, On spotify: #{album['on_spotify'] ? 'YES' : 'NO'}"
+      end
+      print_dash(130)
+    end
+    puts "\n No Music Album to Display \n" if @lood_files[:music_albums].empty?
+  end
 
 
 

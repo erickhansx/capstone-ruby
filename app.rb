@@ -53,6 +53,19 @@ class App
     print_dash(174)
   end
 
+  def list_all_games
+    unless @lood_files[:games].empty?
+      print_dash(130)
+      puts '                                                                 Games:                                           '
+      @lood_files[:games].each do |game|
+        print_dash(130)
+        puts "Genre: #{game['genre']['name']}, Author name: #{game['author']['first_name']} #{game['author']['last_name']},Label title: #{game['label']['title']}, label color: #{game['label']['color']},Publish date: #{game['publish_date']}, MultiPlayer: #{game['multiplayer']}, Last Played on: #{game['last_played_at']}"
+      end
+      print_dash(130)
+    end
+    puts "\n No Movie to Display \n" if @lood_files[:games].empty?
+  end
+
 
 
 

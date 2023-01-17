@@ -96,11 +96,9 @@ class App
   def write_files()
     write_json_file('database/books.json', @lood_files[:books])
     write_json_file('database/music_albums.json', @lood_files[:music_albums])
-    write_json_file('database/movies.json', @lood_files[:movies])
     write_json_file('database/games.json', @lood_files[:games])
     write_json_file('database/genres.json', @lood_files[:genres])
     write_json_file('database/authors.json', @lood_files[:authors])
     write_json_file('database/labels.json', @lood_files[:labels])
-    write_json_file('database/sources.json', @lood_files[:sources])
   end
 end

@@ -1,7 +1,12 @@
 require_relative './src/modules/read_write_file'
+require_relative './src/author'
+require_relative './src/genre'
+require_relative './src/book'
+require_relative './src/music_album'
+require_relative './src/game'
+require_relative './src/label'
 require_relative './src/modules/get_user_input'
 require_relative './src/modules/read_file'
-
 class App
   attr_accessor :genres, :authors, :sources, :labels, :books, :music_albums, :movies, :games
 
@@ -21,18 +26,30 @@ class App
     puts 'Follow the Prompt to Add a new music Album'
     new_genre = Genre.new(@user_input.genre(thing))
     @lood_files[:genres] << new_genre unless @lood_files[:genres].include?(new_genre)
-    print_dash(174)
+    print_dash(130)
     new_author = @user_input.author
     author = Author.new(new_author[:f_name], new_author[:l_name])
     @lood_files[:authors] << author unless @lood_files[:authors].include?(author)
-    print_dash(174)
+    print_dash(130)
     new_label = @user_input.label
     label = Label.new(new_label[:title], new_label[:color])
     @lood_files[:labels] << label unless @lood_files[:labels].include?(label)
-    print_dash(174)
+    print_dash(130)
     [new_genre, author, label]
   end
 
+  def add_book
+    arg = get_attributes('Book')
+    publish_date = @user_input.input_date('Publish date')
+    publisher = @user_input.str('Publisher')
+    cover_state = @user_input.str('Cover State')
+    book = Book.new(arg[0], arg[1], arg[3], arg[2], publish_date, publisher, cover_state)
+    new_book = @user_input.parse_data(book)
+    @lood_files[:books] << new_book unless @lood_files[:books].include?(new_book)
+    print_dash(130)
+    puts '                                                    Book added successfully                                     '
+    print_dash(130)
+  end
 
 
 

@@ -33,6 +33,20 @@ class App
     [new_genre, author, label]
   end
 
+  def add_game
+    arg = get_attributes('Game')
+    publish_date = @user_input.input_date('Publish date')
+    last_played = @user_input.input_date('Last played date')
+    print 'Enter Game mode multiplayer? Choose one [YES/NO]: '
+    game_mode = gets.chomp
+    game = Game.new(arg[0], arg[1], arg[3], arg[2], publish_date, game_mode, last_played)
+    new_game = @user_input.parse_data(game)
+    @lood_files[:games] << new_game unless @lood_files[:games].include?(new_game)
+    print_dash(174)
+    puts '                                                     Game added successfully                                     '
+    print_dash(174)
+  end
+
 
 
 

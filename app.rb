@@ -30,7 +30,7 @@ class App
   def interface
     display_options = ["\n Welcome to Catalog of my things App! \n",
                        "\n Please Choose an option by entering a number \n\n", '1 - List all books', '2 - List all music albums',
-                       '3 - List all movies', '4 - List of games', '5 - List all genres', '6 - List all labels', '7 - List all authors',
+                       '3 - List all movies', '4 - List of games', '5 - List all genres', '6 - List all labels', ' - List all authors',
                        '8 - List all sources', '9 - Add a book', '10 - Add a movie', '11 - Add a game', '12 - Add music album ',
                        '0 - Enter 0 to exit app']
     display_options.each do |option|

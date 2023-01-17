@@ -30,13 +30,29 @@ class App
     print_dash(130)
     new_author = @user_input.author
     author = Author.new(new_author[:f_name], new_author[:l_name])
+
+  
+
     @lood_files[:authors] << author unless @lood_files[:authors].any?{ |aut| author.first_name == aut[:first_name] && author.last_name == aut[:last_name]}
+
     print_dash(130)
     new_label = @user_input.label
     label = Label.new(new_label[:title], new_label[:color])
     @lood_files[:labels] << label unless @lood_files[:labels].include?(label)
     print_dash(130)
     [new_genre, author, label]
+  end
+
+
+def add_music_album
+    arg = get_attributes('Music')
+    new_date = @user_input.publish_date('On spotify')
+    music = MusicAlbum.new(arg[0], arg[1], arg[3], arg[2], new_date[:date], new_date[:boolean])
+    new_music = @user_input.parse_data(music)
+    @lood_files[:music_albums] << new_music unless @lood_files[:music_albums].include?(new_music)
+    print_dash(130)
+    puts '                                                     music album added successfully                                    '
+    print_dash(130)
   end
 
   def add_game
@@ -80,9 +96,34 @@ class App
 
 
 
+  def list_all_music_albums
+    unless @lood_files[:music_albums].empty?
+      print_dash(130)
+      puts '|                                                                Music albums:'
+      @lood_files[:music_albums].each do |album|
+        print_dash(130)
+        puts "Genre: #{album['genre']['name']}, Author name: #{album['author']['first_name']} #{album['author']['last_name']},
+        Label title: #{album['label']['title']}, label color: #{album['label']['color']},
+        Publish date: #{album['publish_date']}, On spotify: #{album['on_spotify'] ? 'YES' : 'NO'}"
+      end
+      print_dash(130)
+    end
+    puts "\n No Music Album to Display \n" if @lood_files[:music_albums].empty?
+  end
 
-
-
+def list_all_genres
+    unless @lood_files[:genres].empty?
+      print_dash(130)
+      puts 'Genres:'
+      print_dash(130)
+      @lood_files[:genres].each do |genre|
+        print "#{genre['name']}, "
+      end
+      puts "\n"
+    end
+    print_dash(130)
+    puts "No genre to display \n" if @lood_files[:genres].empty?
+  end
 
 
 
@@ -98,11 +139,9 @@ class App
   def write_files()
     write_json_file('database/books.json', @lood_files[:books])
     write_json_file('database/music_albums.json', @lood_files[:music_albums])
-    write_json_file('database/movies.json', @lood_files[:movies])
     write_json_file('database/games.json', @lood_files[:games])
     write_json_file('database/genres.json', @lood_files[:genres])
     write_json_file('database/authors.json', @lood_files[:authors])
     write_json_file('database/labels.json', @lood_files[:labels])
-    write_json_file('database/sources.json', @lood_files[:sources])
   end
 end

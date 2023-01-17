@@ -1,3 +1,21 @@
 [
-
+  {
+    "genre": {
+      "id": 485,
+      "name": "Comedy"
+    },
+    "author": {
+      "id": 504,
+      "first_name": "Ndorrh",
+      "last_name": "James"
+    },
+    "label": {
+      "id": 273,
+      "title": "New",
+      "color": "red"
+    },
+    "publish_date": "2025-10-10",
+    "publisher": "10/10/2012",
+    "cover_state": "Good"
+  }
 ]

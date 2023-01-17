@@ -1,82 +1,21 @@
 [
   {
     "genre": {
-      "id": 438,
-      "name": "1"
+      "id": 443,
+      "name": "Action"
     },
     "author": {
-      "id": 529,
-      "first_name": "1",
-      "last_name": "1"
+      "id": 677,
+      "first_name": "Osxas",
+      "last_name": "Zibbu"
     },
-    "source": null,
     "label": {
-      "id": 214,
-      "title": "1",
-      "color": "1"
+      "id": 113,
+      "title": "New",
+      "color": "pink"
     },
-    "publish_date": "2000-12-12",
+    "publish_date": "2014-10-10",
     "multiplayer": "YES",
-    "last_played_at": "2000-12-12"
-  },
-  {
-    "genre": {
-      "id": 463,
-      "name": "2"
-    },
-    "author": {
-      "id": 626,
-      "first_name": "1",
-      "last_name": "1"
-    },
-    "source": null,
-    "label": {
-      "id": 217,
-      "title": "2",
-      "color": "2"
-    },
-    "publish_date": "2019-05-05",
-    "multiplayer": "YES",
-    "last_played_at": "2020-05-02"
-  },
-  {
-    "genre": {
-      "id": 365,
-      "name": "5"
-    },
-    "author": {
-      "id": 553,
-      "first_name": "1",
-      "last_name": "1"
-    },
-    "source": null,
-    "label": {
-      "id": 211,
-      "title": "5",
-      "color": "5"
-    },
-    "publish_date": "1999-01-01",
-    "multiplayer": "YES",
-    "last_played_at": "1999-02-02"
-  },
-  {
-    "genre": {
-      "id": 338,
-      "name": "6"
-    },
-    "author": {
-      "id": 610,
-      "first_name": "1",
-      "last_name": "1"
-    },
-    "source": null,
-    "label": {
-      "id": 270,
-      "title": "6",
-      "color": "6"
-    },
-    "publish_date": "2010-10-10",
-    "multiplayer": "YES",
-    "last_played_at": "2010-12-12"
+    "last_played_at": "2022-10-10"
   }
 ]

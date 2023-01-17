@@ -1,21 +1,20 @@
 [
   {
     "genre": {
-      "id": 474,
-      "name": "Classical"
+      "id": 318,
+      "name": "9"
     },
     "author": {
-      "id": 567,
-      "first_name": "Yanni",
-      "last_name": "Yianouppolous"
+      "id": 583,
+      "first_name": "Kelly",
+      "last_name": "Ryan"
     },
-    "source": null,
     "label": {
-      "id": 242,
+      "id": 149,
       "title": "New",
-      "color": "Red"
+      "color": "Yellow"
     },
-    "publish_date": "2002-10-02",
-    "on_spotify": false
+    "publish_date": "2016-04-10",
+    "on_spotify": true
   }
 ]

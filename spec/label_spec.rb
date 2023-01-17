@@ -6,11 +6,10 @@ describe MusicAlbum do
     before(:each) do
       genre = { id: 384, name: 'Action', items: [] }
       author = { id: 572, first_name: 'Ndorrh', last_name: 'oswald beu', items: [] }
-      source = { id: 76, name: 'Online shop', items: [] }
       publish_date = '10/10/2011'
       on_spotify = true
       @label = Label.new('Gift', 'pink')
-      @music = MusicAlbum.new(genre, author, source, @label, publish_date, on_spotify)
+      @music = MusicAlbum.new(genre, author, @label, publish_date, on_spotify)
     end
 
     it 'Returns the instance of class' do

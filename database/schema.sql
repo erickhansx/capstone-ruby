@@ -12,10 +12,11 @@ CREATE TABLE "Genre"(
 ALTER TABLE
     "Genre" ADD PRIMARY KEY("id");
 
-
-
-
-
+CREATE TABLE "Label"(
+    "id" BIGINT NOT NULL,
+    "title" VARCHAR(255) NOT NULL,
+    "color" VARCHAR(255) NOT NULL
+);
 
 
 

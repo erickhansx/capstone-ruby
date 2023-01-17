@@ -27,15 +27,15 @@ class App
     puts 'Follow the Prompt to Add a new music Album'
     new_genre = Genre.new(@user_input.genre(thing))
     @lood_files[:genres] << new_genre unless @lood_files[:genres].include?(new_genre)
-    print_dash(174)
+    print_dash(130)
     new_author = @user_input.author
     author = Author.new(new_author[:f_name], new_author[:l_name])
-    @lood_files[:authors] << author unless @lood_files[:authors].include?(author)
-    print_dash(174)
+    @lood_files[:authors] << author unless @lood_files[:authors].any?{ |aut| author.first_name == aut[:first_name] && author.last_name == aut[:last_name]}
+    print_dash(130)
     new_label = @user_input.label
     label = Label.new(new_label[:title], new_label[:color])
     @lood_files[:labels] << label unless @lood_files[:labels].include?(label)
-    print_dash(174)
+    print_dash(130)
     [new_genre, author, label]
   end
 
@@ -64,6 +64,18 @@ class App
       print_dash(130)
     end
     puts "\n No Movie to Display \n" if @lood_files[:games].empty?
+  end
+
+  def list_all_authors
+    unless @lood_files[:authors].empty?
+      print_dash(130)
+      puts 'Authors:'
+      @lood_files[:authors].each do |author|
+        print_dash(130)
+        puts "Name: #{author['first_name']}, #{author['last_name']}"
+      end
+    end
+    puts "No author to display \n" if @lood_files[:authors].empty?
   end
 
 

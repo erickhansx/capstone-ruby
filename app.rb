@@ -17,7 +17,21 @@ class App
     end
     puts dash
   end
-
+  def get_attributes(thing)
+    puts 'Follow the Prompt to Add a new music Album'
+    new_genre = Genre.new(@user_input.genre(thing))
+    @lood_files[:genres] << new_genre unless @lood_files[:genres].include?(new_genre)
+    print_dash(174)
+    new_author = @user_input.author
+    author = Author.new(new_author[:f_name], new_author[:l_name])
+    @lood_files[:authors] << author unless @lood_files[:authors].include?(author)
+    print_dash(174)
+    new_label = @user_input.label
+    label = Label.new(new_label[:title], new_label[:color])
+    @lood_files[:labels] << label unless @lood_files[:labels].include?(label)
+    print_dash(174)
+    [new_genre, author, label]
+  end
 
 
 

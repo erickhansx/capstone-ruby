@@ -65,7 +65,19 @@ def add_music_album
     puts "\n No Music Album to Display \n" if @lood_files[:music_albums].empty?
   end
 
-
+def list_all_genres
+    unless @lood_files[:genres].empty?
+      print_dash(130)
+      puts 'Genres:'
+      print_dash(130)
+      @lood_files[:genres].each do |genre|
+        print "#{genre['name']}, "
+      end
+      puts "\n"
+    end
+    print_dash(130)
+    puts "No genre to display \n" if @lood_files[:genres].empty?
+  end
 
 
 
@@ -81,11 +93,9 @@ def add_music_album
   def write_files()
     write_json_file('database/books.json', @lood_files[:books])
     write_json_file('database/music_albums.json', @lood_files[:music_albums])
-    write_json_file('database/movies.json', @lood_files[:movies])
     write_json_file('database/games.json', @lood_files[:games])
     write_json_file('database/genres.json', @lood_files[:genres])
     write_json_file('database/authors.json', @lood_files[:authors])
     write_json_file('database/labels.json', @lood_files[:labels])
-    write_json_file('database/sources.json', @lood_files[:sources])
   end
 end

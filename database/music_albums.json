@@ -1,3 +1,21 @@
 [
-
+  {
+    "genre": {
+      "id": 474,
+      "name": "Classical"
+    },
+    "author": {
+      "id": 567,
+      "first_name": "Yanni",
+      "last_name": "Yianouppolous"
+    },
+    "source": null,
+    "label": {
+      "id": 242,
+      "title": "New",
+      "color": "Red"
+    },
+    "publish_date": "2002-10-02",
+    "on_spotify": false
+  }
 ]

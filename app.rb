@@ -25,17 +25,18 @@ class App
 
   def get_attributes(item)
     puts "Follow the Prompt to Add a new #{item}"
-    new_genre = Genre.new(@user_input.genre(item))
+    genre = Genre.new(@user_input.genre(item))
+    new_genre = @user_input.parse_data(genre)
     @lood_files[:genres] << new_genre unless @lood_files[:genres].include?(new_genre)
     print_dash(130)
     new_author = @user_input.author
-    author = Author.new(new_author[:f_name], new_author[:l_name])
-    @lood_files[:authors] << author unless @lood_files[:authors].any? do |aut|
-                                             author.first_name == aut[:first_name] && author.last_name == aut[:last_name]
-                                           end
+    new_author = Author.new(new_author[:f_name], new_author[:l_name])
+    author = @user_input.parse_data(new_author)
+    @lood_files[:authors] << author unless @lood_files[:authors].include?(author)
     print_dash(130)
     new_label = @user_input.label
-    label = Label.new(new_label[:title], new_label[:color])
+    new_label = Label.new(new_label[:title], new_label[:color])
+    label = @user_input.parse_data(new_label)
     @lood_files[:labels] << label unless @lood_files[:labels].include?(label)
     print_dash(130)
     [new_genre, author, label]
@@ -72,7 +73,7 @@ class App
   def list_all_labels
     unless @lood_files[:labels].empty?
       print_dash(130)
-      puts 'Labels:'
+      puts '| Labels:'
       @lood_files[:labels].each do |label|
         print_dash(130)
         puts "| Title: #{label['title']}, Color: #{label['color']}"
@@ -101,9 +102,9 @@ class App
     game = Game.new(arg[0], arg[1], arg[2], publish_date, game_mode, last_played)
     new_game = @user_input.parse_data(game)
     @lood_files[:games] << new_game unless @lood_files[:games].include?(new_game)
-    print_dash(174)
+    print_dash(130)
     puts '|                                                    Game added successfully                                     '
-    print_dash(174)
+    print_dash(130)
   end
 
   def list_all_games
@@ -127,7 +128,7 @@ class App
       puts '| Authors:'
       @lood_files[:authors].each do |author|
         print_dash(130)
-        puts "Name: #{author['first_name']}, #{author['last_name']}"
+        puts "| Name: #{author['first_name']}, #{author['last_name']}"
       end
     end
     puts "No author to display \n" if @lood_files[:authors].empty?
@@ -151,10 +152,10 @@ class App
   def list_all_genres
     unless @lood_files[:genres].empty?
       print_dash(130)
-      puts 'Genres:'
+      puts '| Genres:'
       print_dash(130)
       @lood_files[:genres].each do |genre|
-        print "#{genre['name']}, "
+        print "| #{genre['name']}, "
       end
       puts "\n"
     end

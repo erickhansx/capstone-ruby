@@ -1,21 +1,21 @@
 [
   {
     "genre": {
-      "id": 459,
-      "name": "cvsdsd"
+      "id": 485,
+      "name": "Comedy"
     },
     "author": {
-      "id": 699,
-      "first_name": "fsdsdf",
-      "last_name": "sfsdf"
+      "id": 504,
+      "first_name": "Ndorrh",
+      "last_name": "James"
     },
     "label": {
-      "id": 140,
-      "title": "sdfsdf",
-      "color": "sdfdsf"
+      "id": 273,
+      "title": "New",
+      "color": "red"
     },
-    "publish_date": "2017-10-10",
-    "publisher": "sdad",
-    "cover_state": "sdsd"
+    "publish_date": "2025-10-10",
+    "publisher": "10/10/2012",
+    "cover_state": "Good"
   }
 ]

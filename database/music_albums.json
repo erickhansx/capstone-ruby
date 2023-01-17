@@ -1,20 +1,20 @@
 [
   {
     "genre": {
-      "id": 489,
-      "name": "casddsa"
+      "id": 318,
+      "name": "9"
     },
     "author": {
-      "id": 609,
-      "first_name": "asdasd",
-      "last_name": "asdasd"
+      "id": 583,
+      "first_name": "Kelly",
+      "last_name": "Ryan"
     },
     "label": {
-      "id": 118,
-      "title": "asdasd",
-      "color": "sadsad"
+      "id": 149,
+      "title": "New",
+      "color": "Yellow"
     },
-    "publish_date": "2012-10-10",
+    "publish_date": "2016-04-10",
     "on_spotify": true
   }
 ]

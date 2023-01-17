@@ -43,7 +43,6 @@ ALTER TABLE
 
 
 
-
 CREATE TABLE "MusicAlbum"(
     "id" BIGINT NOT NULL,
     "publish_date" DATE NOT NULL,
@@ -90,11 +89,8 @@ ALTER TABLE
 ALTER TABLE
     "MusicAlbum" ADD CONSTRAINT "musicalbum_genre_id_foreign" FOREIGN KEY("genre_id") REFERENCES "Genre"("id");
 
-
-
-
-
-    
+ALTER TABLE
+    "Book" ADD CONSTRAINT "book_genre_id_foreign" FOREIGN KEY("genre_id") REFERENCES "Genre"("id"); 
 
 ALTER TABLE
     "Movie" ADD CONSTRAINT "movie_genre_id_foreign" FOREIGN KEY("genre_id") REFERENCES "Genre"("id");
@@ -109,13 +105,14 @@ ALTER TABLE
 ALTER TABLE
     "Game" ADD CONSTRAINT "game_author_id_foreign" FOREIGN KEY("author_id") REFERENCES "Author"("id");
 
-
-
-
-
-
-
-    
+ALTER TABLE
+    "MusicAlbum" ADD CONSTRAINT "musicalbum_label_id_foreign" FOREIGN KEY("label_id") REFERENCES "Label"("id");
+ALTER TABLE
+    "Book" ADD CONSTRAINT "book_label_id_foreign" FOREIGN KEY("label_id") REFERENCES "Label"("id");
+ALTER TABLE
+    "Movie" ADD CONSTRAINT "movie_label_id_foreign" FOREIGN KEY("label_id") REFERENCES "Label"("id");
+ALTER TABLE
+    "Game" ADD CONSTRAINT "game_label_id_foreign" FOREIGN KEY("label_id") REFERENCES "Label"("id");    
 
 ALTER TABLE
     "MusicAlbum" ADD CONSTRAINT "musicalbum_source_id_foreign" FOREIGN KEY("source_id") REFERENCES "Source"("id");

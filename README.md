@@ -39,7 +39,8 @@
 
 # UML DIAGRAM
 
-![UML DIAGRAM](https://github.com/microverseinc/curriculum-ruby/blob/main/group-capstone/images/catalog_of_my_things.png?raw=true)
+![UML DIAGRAM]
+<img src="./catalog_of_my_things.png" width="200px" />
 
 <!-- Features -->
 ### Tech Stack <a name="tech-stack"></a>
@@ -126,6 +127,11 @@ To run tests, run the following command:
 - Twitter: [@Ndorrh Ebu](https://twitter.com/NdorrhEbu)
 - LinkedIn: [ndorrh](https://linkedin.com/in/ndorrhoswaldebu)
 
+👤 **Akpuru Solomon
+
+- GitHub: [@githubhandle](https://github.com/solobarine)
+- Twitter: [@twitterhandle](https://twitter.com/solomonakpuru)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/solomon-akpuru)
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->

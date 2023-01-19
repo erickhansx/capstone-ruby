@@ -1,0 +1,20 @@
+[
+  {
+    "genre": {
+      "id": 318,
+      "name": "9"
+    },
+    "author": {
+      "id": 583,
+      "first_name": "Kelly",
+      "last_name": "Ryan"
+    },
+    "label": {
+      "id": 149,
+      "title": "New",
+      "color": "Yellow"
+    },
+    "publish_date": "2016-04-10",
+    "on_spotify": true
+  }
+]

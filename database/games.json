@@ -1,0 +1,21 @@
+[
+  {
+    "genre": {
+      "id": 443,
+      "name": "Action"
+    },
+    "author": {
+      "id": 677,
+      "first_name": "Osxas",
+      "last_name": "Zibbu"
+    },
+    "label": {
+      "id": 113,
+      "title": "New",
+      "color": "pink"
+    },
+    "publish_date": "2014-10-10",
+    "multiplayer": "YES",
+    "last_played_at": "2022-10-10"
+  }
+]
